@@ -1,6 +1,8 @@
 ﻿<!--
-title = champ - a static site generator for Windows
+title = champ
+subtext = a static site generator for Windows
 template = page
+menu = champ
 -->
 ```champ``` is a sensible static site generator for Windows that tries to stay out of your way and make creating
 content really simple. It has the following features:

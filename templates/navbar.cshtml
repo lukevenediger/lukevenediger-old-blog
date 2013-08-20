@@ -1,29 +1,27 @@
-﻿  <div class="navbar navbar-fixed-top">
+﻿  <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <a href="../" class="navbar-brand">LukeVenediger.com</a>
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="nav-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="projects">My Projects <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a tabindex="-1" href="@ResolveUrl("projects/statsd.net/index.html")" title="a scalable metrics collection service for graphite">statsd.net</a></li>
-                <li><a tabindex="-1" href="@ResolveUrl("projects/statsd-csharp-client/index.html")" title="a client for statsd.net and statsd">statsd.net client</a></li>
-                <li><a tabindex="-1" href="@ResolveUrl("projects/champ/index.html")" title="a static site generator for windows">champ</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="@ResolveUrl("blog/index.html")">Blog</a>
-            </li>
-          </ul>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="@ResolveUrl("index.html")">Luke Venediger .me</a>
+        </div>
 
-          <ul class="nav navbar-nav pull-right">
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="@ResolveUrl("index.html")">Home</a></li>
+            <li class="@ValueIf(ViewBag.menu == "about", "active")"><a href="@ResolveUrl("about.html")">About</a></li>
+            <li class="@ValueIf(ViewBag.menu == "statsd.net", "active")"><a href="@ResolveUrl("projects/statsd.net/index.html")" title="Application metrics collection and aggregation for Windows.">statsd.net</a></li>
+            <li class="@ValueIf(ViewBag.menu == "champ", "active")"><a href="@ResolveUrl("projects/champ/index.html")" title="Static site generator that combines Markdown and Razor.">champ</a></li>
+            <li class="@ValueIf(ViewBag.menu == "statsd-csharp-client", "active")"><a href="@ResolveUrl("projects/statsd-csharp-client/index.html")" title="A c# client for logging metrics to statsd and statsd.net">statsd-csharp-client</a></li>
+          </ul>
+          <!-- RHS menu -->
+          <ul class="nav navbar-nav navbar-right">
             <li><a href="http://twitter.com/lukevenediger" title="lukevenediger"><i class="icon-twitter"></i></a></li>
             <li><a href="http://www.linkedin.com/in/lukevenediger" title="Find me on LinkedIn"><i class="icon-linkedin"></i></a>
+            <li><a href="https://github.com/lukevenediger" title="github"><i class="icon-github"></i></a>
           </ul>
         </div>
       </div>
