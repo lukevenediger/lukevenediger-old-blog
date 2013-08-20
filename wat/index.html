@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Writings about software development, metrics and open source.">
   <meta name="author" content="Luke Venediger">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
   <link rel="shortcut icon" type="image/png" href="../static/favicon.png" />
   <link rel="icon" type="image/png" href="../static/favicon.png" />
 
-  <title>Luke Venediger | Working with Metrics</title>
+  <title>Luke Venediger | Play WAT!</title>
   <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
   <link href="../static/css/bootstrap-theme.min.css" rel="stylesheet" />
   <link href="../static/css/sticky-footer.css" rel="stylesheet" />
@@ -39,7 +40,7 @@
             <li><a href="../projects/statsd.net/index.html" title="Application metrics collection and aggregation for Windows.">statsd.net</a></li>
             <li><a href="../projects/champ/index.html" title="Static site generator that combines Markdown and Razor.">champ</a></li>
             <li><a href="../projects/statsd-csharp-client/index.html" title="A c# client for logging metrics to statsd and statsd.net">statsd-csharp-client</a></li>
-            <li><a href="../wat/index.html" title="Play Whack-A-Troll!">wat!</a></li>
+            <li class="active"><a href="../wat/index.html" title="Play Whack-A-Troll!">wat!</a></li>
           </ul>
           <!-- RHS menu -->
           <!--
@@ -53,60 +54,68 @@
       </div>
     </div>
   
-    <!-- title -->
-  <div class="jumbotron">
-    <div class="container">
-      <h1>Working with Metrics</h1>
-    </div>
-  </div>
-
+  
 
   <!-- Main Content -->
   
+<link href="../static/css/game.css" rel="stylesheet" />
 
-  <div class="container theme-showcase">
-    <div class="row">
-      <div class="col-lg-8">
-        <p><!--
-title = Working with Metrics
-template = page
+<!--
+title = Play WAT!
+template = game
+menu = wat
+showFooter = false
+showJumbotron = false
+stopZoom = true
 -->
-This guide is aimed at people who have metrics in their applications and want to get more value out of what
-they're doing. I'm writing mostly from my own experience of operating a large-scale metrics service, both
-from what I've seen people do and what I've done when instrumenting my own services.</p>
 
-<p>Please feel free to submit a pull request with corrections and additional content.</p>
+<div class="row">
+  <h4 class="game-title col-xs-12 col-md-12">
+    Whack A Troll! Hits: <span class="hits">0</span> Best: <span class="best">0</span>
+  </h4>
+</div>
 
-<p>```csharp
-public class foo
-{
-  public string Bar {get; set;}
-}</p>
-
-<h2>Logging Metrics</h2>
-
-<ul>
-<li><a href="page:types-of-metrics">Types of Metrics</a></li>
-</ul>
-
-      </div>
-    </div>
+<div class="game">
+  <div class="row">
+    <div class="col-xs-2 col-md-2"></div>
+    <div class="col-xs-3 col-md-3 box waiting" id="box1">?</div>
+    <div class="col-xs-2 col-md-2"></div>
+    <div class="col-xs-3 col-md-3 box waiting" id="box2">?</div>
+    <div class="col-xs-2 col-md-2"></div>
   </div>
+  <div class="row">
+    <div class="col-xs-2 col-md-2"></div>
+    <div class="col-xs-3 col-md-3 box waiting" id="box3">?</div>
+    <div class="col-xs-2 col-md-2"></div>
+    <div class="col-xs-3 col-md-3 box waiting" id="box4">?</div>
+    <div class="col-xs-2 col-md-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-2 col-md-2"></div>
+    <div class="col-xs-3 col-md-3 box waiting" id="box5">?</div>
+    <div class="col-xs-2 col-md-2"></div>
+    <div class="col-xs-3 col-md-3 box waiting" id="box6">?</div>
+    <div class="col-xs-2 col-md-2"></div>
+  </div>
+</div>
 
-<hr />
+<div class="game-over" style="display: none;">
+</div>
 
+
+<script type="text/javascript" src="../static/scripts/fastclick.js"></script>
+<script type="text/javascript">
+  $(function () {
+    FastClick.attach(document.body);
+  });
+</script>
+<script type="text/javascript" src="../static/scripts/statsd.js"></script>
+<script type="text/javascript" src="../static/scripts/whackatroll.js"></script>
 
   <!-- end of wrap -->
   </div>
 
   <!-- Footer -->
-    <div id="footer">
-    <div class="container">
-      <p class="text-muted credit">
-        Built with <a href="https://github.com/lukevenediger/champ/">champ</a>, a simple static site generator for Windows. Built at 2013/08/21 01:56:31 AM
-      </p>
-    </div>
-  </div>
-
+  
 </body>
 </html>
