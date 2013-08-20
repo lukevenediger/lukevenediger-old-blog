@@ -1,0 +1,45 @@
+﻿h4.game-title {
+    padding-top: 62px;
+    text-align:center;
+}
+.game {
+    .box {
+        border: 1px solid black;
+        height: 100px;
+        width: 100px;
+
+        &.waiting {
+            font-size: 70px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        &.troll {
+            background: url(../images/yaoming.png) no-repeat 10px 0px;
+            font-size: 0px;
+        }
+
+        &.troll-lol {
+            background: url(../images/yaoming-lol.png) no-repeat 10px 0px;
+            font-size: 0px;
+        }
+
+        &.explosion {
+            background: url(../images/explosion.gif) no-repeat -45px -15px;
+            font-size: 0px;
+        }
+    }
+
+    .row {
+        margin-bottom: 20px;
+    }
+}
+.game-over {
+    background: url(../images/game-over.jpeg) no-repeat center;
+    height: 390px;
+    width: 100%;
+}
+body:after {
+    content: url(../images/yaoming-lol.png) url(../images/yaoming.png) url(../images/explosion.gif) url(../images/game-over.jpeg);
+    display: none;
+}

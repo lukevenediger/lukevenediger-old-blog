@@ -1,7 +1,11 @@
-﻿  <div id="footer">
+﻿@using System;
+@if(ValueOrDefault(ViewBag.showFooter, "true") == "true")
+{
+  <div id="footer">
     <div class="container">
       <p class="text-muted credit">
-        Built with <a href="https://github.com/lukevenediger/champ/">champ</a>, a simple static site generator for Windows.
+        Built with <a href="https://github.com/lukevenediger/champ/">champ</a>, a simple static site generator for Windows. Built at @DateTime.Now.ToString()
       </p>
     </div>
   </div>
+}

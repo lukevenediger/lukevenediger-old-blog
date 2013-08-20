@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Writings about software development, metrics and open source.">
   <meta name="author" content="Luke Venediger">
+  @if (ValueOrDefault(ViewBag.stopZoom, "false") == "true")
+  {
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  }
 
   <link rel="shortcut icon" type="image/png" href="@ResolveUrl("static/favicon.png")" />
   <link rel="icon" type="image/png" href="@ResolveUrl("static/favicon.png")" />
@@ -14,34 +18,21 @@
   <link href="@ResolveUrl("static/css/bootstrap-theme.min.css")" rel="stylesheet" />
   <link href="@ResolveUrl("static/css/sticky-footer.css")" rel="stylesheet" />
   <link href="@ResolveUrl("static/css/font-awesome.min.css")" rel="stylesheet" />
-  <script src="@ResolveUrl("static/scripts/jquery-2.0.3.min.js")"></script>
-  <script src="@ResolveUrl("static/scripts/bootstrap.min.js")"></script>
+  <script type="text/javascript" src="@ResolveUrl("static/scripts/jquery-2.0.3.min.js")"></script>
+  <script type="text/javascript" src="@ResolveUrl("static/scripts/bootstrap.min.js")"></script>
 </head>
 <body>
 
   <div id="wrap">
   <!-- Nav Bar -->
   @Include( "navbar" )
-
-  <!-- title -->
-  <div class="jumbotron">
-    <div class="container">
-      <h1>@Model.page.Title</h1>
-      @if ( !String.IsNullOrEmpty( ViewBag.subtext ) )
-      {
-        <p>@ViewBag.subtext</p>
-      }
-    </div>
-  </div>
+  
+  @Include( "jumbotron" )
 
   <!-- Main Content -->
-  <div class="container theme-showcase">
-    <div class="row">
-      <div class="col-lg-8">
-        @RenderBody()
-      </div>
-    </div>
-  </div>
+  @RenderBody()
+
+  <!-- end of wrap -->
   </div>
 
   <!-- Footer -->

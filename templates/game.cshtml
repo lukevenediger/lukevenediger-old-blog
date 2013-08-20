@@ -1,0 +1,15 @@
+﻿@{
+  Layout = "~/_layout.cshtml";
+}
+<link href="@ResolveUrl("static/css/game.css")" rel="stylesheet" />
+
+@Model.Content
+
+<script type="text/javascript" src="@ResolveUrl("static/scripts/fastclick.js")"></script>
+<script type="text/javascript">
+  $(function () {
+    FastClick.attach(document.body);
+  });
+</script>
+<script type="text/javascript" src="@ResolveUrl("static/scripts/statsd.js")"></script>
+<script type="text/javascript" src="@ResolveUrl("static/scripts/whackatroll.js")"></script>
