@@ -38,6 +38,14 @@
   });
 
   var startGame = function () {
+    // Determine the test group
+    if (getRandomInt(1, 10) >= 4) {
+      testGroup = "a";
+    } else {
+      $('div.game').addClass('game-b');
+      testGroup = "b";
+    }
+    statsd.count('wat.testgroup.' + testGroup);
     statsd.count('wat.game.start');
     $('div.game').attr('data-game-start', new Date().getTime());
     nextMove();
@@ -100,14 +108,6 @@
   };
 
   $(function () {
-    // Determine the test group
-    if (getRandomInt(1, 10) >= 4) {
-      testGroup = "a";
-    } else {
-      $('div.game').addClass('game-b');
-      testGroup = "b";
-    }
-    statsd.count('wat.testgroup.' + testGroup);
     
     movesLeft = movesPerGame;
     startGame();
