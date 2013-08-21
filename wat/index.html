@@ -78,23 +78,23 @@ stopZoom = true
 <div class="game">
   <div class="row">
     <div class="col-xs-2 col-md-2"></div>
-    <div class="col-xs-3 col-md-3 box waiting" id="box1">?</div>
+    <div class="col-xs-3 col-md-3 box waiting" id="box1" data-boxNumber="1">?</div>
     <div class="col-xs-2 col-md-2"></div>
-    <div class="col-xs-3 col-md-3 box waiting" id="box2">?</div>
-    <div class="col-xs-2 col-md-2"></div>
-  </div>
-  <div class="row">
-    <div class="col-xs-2 col-md-2"></div>
-    <div class="col-xs-3 col-md-3 box waiting" id="box3">?</div>
-    <div class="col-xs-2 col-md-2"></div>
-    <div class="col-xs-3 col-md-3 box waiting" id="box4">?</div>
+    <div class="col-xs-3 col-md-3 box waiting" id="box2" data-boxNumber="2">?</div>
     <div class="col-xs-2 col-md-2"></div>
   </div>
   <div class="row">
     <div class="col-xs-2 col-md-2"></div>
-    <div class="col-xs-3 col-md-3 box waiting" id="box5">?</div>
+    <div class="col-xs-3 col-md-3 box waiting" id="box3" data-boxNumber="3">?</div>
     <div class="col-xs-2 col-md-2"></div>
-    <div class="col-xs-3 col-md-3 box waiting" id="box6">?</div>
+    <div class="col-xs-3 col-md-3 box waiting" id="box4" data-boxNumber="4">?</div>
+    <div class="col-xs-2 col-md-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-2 col-md-2"></div>
+    <div class="col-xs-3 col-md-3 box waiting" id="box5" data-boxNumber="5">?</div>
+    <div class="col-xs-2 col-md-2"></div>
+    <div class="col-xs-3 col-md-3 box waiting" id="box6" data-boxNumber="6">?</div>
     <div class="col-xs-2 col-md-2"></div>
   </div>
 </div>
@@ -110,6 +110,17 @@ stopZoom = true
   });
 </script>
 <script type="text/javascript" src="../static/scripts/statsd.js"></script>
+<script type="text/javascript">
+  $(function () {
+    statsd.configure({
+      statsdCollectorURL: 'http://54.226.95.137/',
+      pumpIntervalMS: 5000
+    });
+    // Start the pump
+    statsd.pump();
+    statsd.count('wat.loaded');
+  });
+</script>
 <script type="text/javascript" src="../static/scripts/whackatroll.js"></script>
 
   <!-- end of wrap -->

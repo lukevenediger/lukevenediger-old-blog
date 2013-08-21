@@ -27,6 +27,12 @@
 .game .row {
   margin-bottom: 20px;
 }
+.game-b {
+  background-color: red;
+}
+.game-b .box.troll {
+  background: url(../images/yaoming-red.png) no-repeat 10px 0px;
+}
 .game-over {
   background: url(../images/game-over.jpeg) no-repeat center;
   height: 390px;

@@ -2,18 +2,22 @@
 
   var movesPerGame = 10;
   var movesLeft = 0;
-  var timeToHideTroll = 1000;
+  var timeToHideTroll = 2000;
   var flashTime = 300
   var hits = 0;
   var best = 0;
+  var testGroup;
 
   $('div.game div.box').click(function (e) {
     var box = $(this);
     if (box.hasClass('troll')) {
       var startTime = parseInt(box.attr('data-showTime'), 10);
       var latency = new Date().getTime() - startTime;
-      statsd.timing('game.hit.troll', latency);
-      statsd.count('game.hit.troll');
+      statsd.timing('wat.hit.troll', latency);
+      statsd.timing('wat.' + testGroup + '.hit.troll', latency);
+      statsd.count('wat.hit.troll');
+      statsd.count('wat.' + testGroup + '.hit.troll');
+      statsd.count('wat.hit.box.' + box.attr('data-boxNumber'));
 
       hits += 1;
       // Show the explosion
@@ -22,20 +26,26 @@
         box.removeClass('explosion').addClass('waiting');
         nextMove();
       }, flashTime);
-    } else if (box.hasClass('waiting')) {
-      statsd.count('game.hit.waiting');
+    } else {
+      statsd.count('wat.hit.other');
     }
   });
 
   $('div.game-over').click(function (e) {
     $('div.game').show();
     $('div.game-over').hide();
-    nextMove();
+    startGame();
   });
+
+  var startGame = function () {
+    statsd.count('wat.game.start');
+    $('div.game').attr('data-game-start', new Date().getTime());
+    nextMove();
+  };
 
   var showTroll = function (boxNumber) {
     var box = $('#box' + boxNumber);
-    statsd.count("game.box.troll." + boxNumber);
+    statsd.count("wat.box.troll." + boxNumber);
 
     // Show the troll face
     box.removeClass('explosion waiting troll').addClass('troll');
@@ -64,6 +74,10 @@
     $('div.game-over').show();
     hits = 0;
     movesLeft = movesPerGame;
+    statsd.count('wat.game.end');
+    var gameDuration = new Date().getTime() - $('div.game').attr('data-game-start');
+    statsd.timing('wat.game', gameDuration);
+    statsd.timing('wat.' + testGroup + '.game', gameDuration);
   };
 
   var nextMove = function () {
@@ -73,6 +87,7 @@
       $('span.best').text(best);
     }
     $('span.hits').text(hits);
+    statsd.count('wat.move');
 
     if (movesLeft > 0) {
       setTimeout(function () {
@@ -85,8 +100,17 @@
   };
 
   $(function () {
+    // Determine the test group
+    if (getRandomInt(1, 10) >= 4) {
+      testGroup = "a";
+    } else {
+      $('div.game').addClass('game-b');
+      testGroup = "b";
+    }
+    statsd.count('wat.testgroup.' + testGroup);
+    
     movesLeft = movesPerGame;
-    nextMove();
+    startGame();
   });
 
 }(window, window.statsd));
