@@ -12,4 +12,15 @@
   });
 </script>
 <script type="text/javascript" src="@ResolveUrl("static/scripts/statsd.js")"></script>
+<script type="text/javascript">
+  $(function () {
+    statsd.configure({
+      statsdCollectorURL: 'http://54.226.95.137/',
+      pumpIntervalMS: 5000
+    });
+    // Start the pump
+    statsd.pump();
+    statsd.count('wat.loaded');
+  });
+</script>
 <script type="text/javascript" src="@ResolveUrl("static/scripts/whackatroll.js")"></script>

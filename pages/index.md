@@ -3,9 +3,5 @@ template = page
 title = Home
 menu = home
 -->
-## Welcome to the site
-This is the home page. Yes.
-
-### Some more interesting info
-Lorem ipsum.
-Lorem ipsum.
+## Welcome!
+<a href="wat/index.html"><h2>Play Whack-A-Troll!</h2></a>

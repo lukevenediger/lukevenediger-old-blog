@@ -136,15 +136,24 @@
     <None Include="pages\graphite\carbon\index.md" />
     <None Include="pages\graphite\system-administration.md" />
     <Content Include="pages\blog\rss.xml" />
+    <None Include="pages\CNAME" />
     <Content Include="pages\metrics\index.md" />
     <None Include="pages\no_template.md" />
     <Content Include="static\css\bootstrap-theme.min.css" />
     <None Include="static\css\game.less" />
     <Content Include="static\css\game.css" />
+    <Content Include="static\css\game.min.css">
+      <DependentUpon>game.less</DependentUpon>
+    </Content>
     <Content Include="static\css\sticky-footer.css" />
     <Content Include="static\favicon.png" />
     <Content Include="static\font\fontawesome-webfont.svg" />
     <Content Include="static\images\404.jpg" />
+    <Content Include="static\images\explosion.gif" />
+    <Content Include="static\images\game-over.jpeg" />
+    <Content Include="static\images\yaoming-lol.png" />
+    <Content Include="static\images\yaoming.png" />
+    <Content Include="static\scripts\fastclick.js" />
     <Content Include="static\scripts\jquery-2.0.3.min.js" />
     <Content Include="pages\graphite\index.md" />
     <Content Include="pages\graphite\whisper\tips-and-tricks.md" />
@@ -154,6 +163,7 @@
     <Content Include="static\css\bootstrap.min.css" />
     <Content Include="static\css\font-awesome.min.css" />
     <Content Include="static\scripts\bootstrap.min.js" />
+    <Content Include="static\scripts\statsd.js" />
     <Content Include="static\scripts\whackatroll.js" />
     <Content Include="templates\post.cshtml" />
   </ItemGroup>
