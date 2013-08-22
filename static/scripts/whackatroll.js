@@ -110,7 +110,7 @@
   $(function () {
     
     movesLeft = movesPerGame;
-    startGame();
+    //startGame();
   });
 
 }(window, window.statsd));
