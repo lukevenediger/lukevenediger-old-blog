@@ -18,7 +18,8 @@
         function () {
           _lastRequestLatency = new Date().getTime() - requestStart;
           setTimeout(pump, _pumpIntervalMS);
-        });
+        },
+        'jsonp');
     }
     setTimeout(pump, _pumpIntervalMS);
   };
