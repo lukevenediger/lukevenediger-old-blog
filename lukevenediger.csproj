@@ -137,6 +137,7 @@
     <None Include="pages\graphite\system-administration.md" />
     <Content Include="pages\blog\rss.xml" />
     <None Include="pages\CNAME" />
+    <None Include="pages\gists\index.md" />
     <Content Include="pages\metrics\index.md" />
     <None Include="pages\no_template.md" />
     <Content Include="static\css\bootstrap-theme.min.css" />

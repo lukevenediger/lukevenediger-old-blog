@@ -11,15 +11,15 @@
         timing('wat.client.post', _lastRequestLatency);
       }
       var requestStart = new Date().getTime();
-      var data = _outputBuffer.join('\n');
+      var data = _outputBuffer.join(',');
       _outputBuffer = [];
-      $.post(_statsdCollectorURL,
-        data,
+      jQuery.get(_statsdCollectorURL,
+        { metrics: data },
         function () {
           _lastRequestLatency = new Date().getTime() - requestStart;
           setTimeout(pump, _pumpIntervalMS);
         },
-        'text');
+        'jsonp');
     }
     setTimeout(pump, _pumpIntervalMS);
   };
