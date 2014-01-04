@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Writings about software development, metrics and open source.">
   <meta name="author" content="Luke Venediger">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
   <link rel="shortcut icon" type="image/png" href="../static/favicon.png" />
   <link rel="icon" type="image/png" href="../static/favicon.png" />
 
-  <title>Luke Venediger | Play WAT!</title>
+  <title>Luke Venediger | My Projects</title>
   <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
   <link href="../static/css/bootstrap-theme.min.css" rel="stylesheet" />
   <link href="../static/css/sticky-footer.css" rel="stylesheet" />
@@ -45,13 +44,13 @@
         <li>
           <a href="../about.html">About Me</a>
         </li>
-        <li>
+        <li class="active">
           <a href="../projects/index.html">My Projects</a>
         </li>
         <li>
           <a href="../talks/index.html">Talks</a>
         </li>
-        <li class="active">
+        <li>
           <a href="../wat/index.html" title="Play Whack-A-Troll!">Play wat!</a>
         </li>
       </ul>
@@ -67,80 +66,81 @@
   </div>
 </div>
 
-    
+      <!-- title -->
+  <div class="jumbotron detronalize">
+    <div class="container">
+      <h3>My Projects</h3>
+    </div>
+  </div>
+
 
     <!-- Main Content -->
     
-<link href="../static/css/game.css" rel="stylesheet" />
 
-<!--
-title = Play WAT!
-template = game
-menu = wat
-showFooter = false
-showJumbotron = false
-stopZoom = true
--->
+  <div class="container theme-showcase">
+    <div class="row">
+      <div class="col-lg-12">
+        <p><!-- 
+  title = My Projects
+  template = page 
+  menu = my projects
+--></p>
 
-<div class="row">
-  <h4 class="game-title col-xs-12 col-md-12">
-    Whack A Troll! Hits: <span class="hits">0</span> Best: <span class="best">0</span>
-  </h4>
-</div>
+<h2><a href="https://github.com/lukevenediger/statsd.net/">statsd.net</a></h2>
 
-<div class="game">
-  <div class="row">
-    <div class="col-xs-2 col-md-2"></div>
-    <div class="col-xs-3 col-md-3 box waiting" id="box1" data-boxNumber="1">?</div>
-    <div class="col-xs-2 col-md-2"></div>
-    <div class="col-xs-3 col-md-3 box waiting" id="box2" data-boxNumber="2">?</div>
-    <div class="col-xs-2 col-md-2"></div>
+<p>statsd.net is a metrics collection service that collects data, aggregates it and forwards the summarized information to a dashboard system.
+It's built to run in Windows-centric environments, installs as a service, and is designed to handle large volumes of data.</p>
+
+<h2><a href="https://github.com/lukevenediger/statsd-csharp-client/">statsd csharp client</a></h2>
+
+<p>statsd-csharp-client is used in .net applications to send activity measurements to a stats collector like <a href="pages/projects/statsd.net/index.md">statsd.net</a>
+and works on .Net 3.5, 4.0 and 4.5.
+Install via nuget by searching for the <a href="https://www.nuget.org/packages/StatsdCsharpClient/1.1.0.0">Simple Statsd client for .Net 3.5, 4.0 and 4.5</a>
+The github project page also includes a quickstart guide in the readme.</p>
+
+<h2><a href="https://github.com/lukevenediger/dingu/">dingu IOC framework for JavaScript</a></h2>
+
+<p>An angularjs-style dependency injection framework for JavaScript, dingu makes it easy to define modules, singletons and constants that are assembled at runtime when needed.
+Available on Nuget and Bower. See the project readme for usage and download instructions.</p>
+
+<h2><a href="https://github.com/lukevenediger/champ/">champ static site generator</a></h2>
+
+<p>champ is a sensible static site generator for Windows that tries to stay out of your way and make creating
+content really simple. It has the following features:</p>
+
+<ul>
+<li>Uses <a href="http://en.wikipedia.org/wiki/ASP.NET_Razor_view_engine">razor</a> for page templates</li>
+<li>Uses <a href="http://en.wikipedia.org/wiki/Markdown">markdown</a> for content pages</li>
+<li>Supports partial views in templates</li>
+<li>Mirrors the folder structure used in the content pages for the site structure</li>
+<li>Supports the use of a static folder</li>
+</ul>
+
+<h2><a href="https://github.com/lukevenediger/statsdcmd/">statsdcmd</a></h2>
+
+<p>A lightweight command line client for statsd.net and statsd. Useful for, say, logging stats on batch jobs,
+integrating with scripted workflows like source code builds and integrating with Powershell. Works with .Net 4.5
+and upwards.</p>
+
+      </div>
+    </div>
   </div>
-  <div class="row">
-    <div class="col-xs-2 col-md-2"></div>
-    <div class="col-xs-3 col-md-3 box waiting" id="box3" data-boxNumber="3">?</div>
-    <div class="col-xs-2 col-md-2"></div>
-    <div class="col-xs-3 col-md-3 box waiting" id="box4" data-boxNumber="4">?</div>
-    <div class="col-xs-2 col-md-2"></div>
-  </div>
-  <div class="row">
-    <div class="col-xs-2 col-md-2"></div>
-    <div class="col-xs-3 col-md-3 box waiting" id="box5" data-boxNumber="5">?</div>
-    <div class="col-xs-2 col-md-2"></div>
-    <div class="col-xs-3 col-md-3 box waiting" id="box6" data-boxNumber="6">?</div>
-    <div class="col-xs-2 col-md-2"></div>
-  </div>
-</div>
 
-<div class="game-over" style="display: none;">
-</div>
+<hr />
 
-
-<script type="text/javascript" src="../static/scripts/fastclick.js"></script>
-<script type="text/javascript">
-  $(function () {
-    FastClick.attach(document.body);
-  });
-</script>
-<script type="text/javascript" src="../static/scripts/statsd.js"></script>
-<script type="text/javascript">
-  $(function () {
-    statsd.configure({
-      statsdCollectorURL: 'http://54.221.237.11/',
-      pumpIntervalMS: 5000
-    });
-    // Start the pump
-    statsd.pump();
-    statsd.count('wat.loaded');
-  });
-</script>
-<script type="text/javascript" src="../static/scripts/whackatroll.js"></script>
 
     <!-- end of wrap -->
   </div>
 
   <!-- Footer -->
-  
+    <div id="footer">
+    <div class="container">
+      <p class="text-muted credit">
+        Built with <a href="https://github.com/lukevenediger/champ/">champ</a>, a simple static site generator for Windows. Built at 2014-01-05 12:13:02 AM
+      </p>
+    </div>
+  </div>
+
   <script>
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
