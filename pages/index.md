@@ -1,5 +1,5 @@
 ﻿<!--
-template = page
+template = home
 title = Home
 menu = home
 -->

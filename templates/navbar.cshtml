@@ -1,31 +1,43 @@
-﻿  <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="@ResolveUrl("index.html")">Luke Venediger .me</a>
-        </div>
-
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="@ValueIf(ViewBag.menu == "home", "active")"><a href="@ResolveUrl("index.html")">Home</a></li>
-            <li class="@ValueIf(ViewBag.menu == "about", "active")"><a href="@ResolveUrl("about.html")">About</a></li>
-            <li class="@ValueIf(ViewBag.menu == "statsd.net", "active")"><a href="@ResolveUrl("projects/statsd.net/index.html")" title="Application metrics collection and aggregation for Windows.">statsd.net</a></li>
-            <li class="@ValueIf(ViewBag.menu == "champ", "active")"><a href="@ResolveUrl("projects/champ/index.html")" title="Static site generator that combines Markdown and Razor.">champ</a></li>
-            <li class="@ValueIf(ViewBag.menu == "statsd-csharp-client", "active")"><a href="@ResolveUrl("projects/statsd-csharp-client/index.html")" title="A c# client for logging metrics to statsd and statsd.net">statsd-csharp-client</a></li>
-            <li class="@ValueIf(ViewBag.menu == "wat", "active")"><a href="@ResolveUrl("wat/index.html")" title="Play Whack-A-Troll!">wat!</a></li>
-          </ul>
-          <!-- RHS menu -->
-          <!--
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://twitter.com/lukevenediger" title="lukevenediger"><i class="icon-twitter"></i></a></li>
-            <li><a href="http://www.linkedin.com/in/lukevenediger" title="Find me on LinkedIn"><i class="icon-linkedin"></i></a>
-            <li><a href="https://github.com/lukevenediger" title="github"><i class="icon-github"></i></a>
-          </ul>
-            -->
-        </div>
-      </div>
+﻿<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="@ResolveUrl("index.html")">Luke Venediger .me</a>
     </div>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="@ValueIf(ViewBag.menu == "home", "active")">
+          <a href="@ResolveUrl("index.html")">Home</a>
+        </li>
+        <li class="@ValueIf(ViewBag.menu == "blog", "active")">
+          <a href="@ResolveUrl("blog/index.html")">Blog</a>
+        </li>
+        <li class="@ValueIf(ViewBag.menu == "about me", "active")">
+          <a href="@ResolveUrl("about.html")">About Me</a>
+        </li>
+        <li class="@ValueIf(ViewBag.menu == "my projects", "active")">
+          <a href="@ResolveUrl("projects/index.html")">My Projects</a>
+        </li>
+        <li class="@ValueIf(ViewBag.menu == "talks", "active")">
+          <a href="@ResolveUrl("talks/index.html")">Talks</a>
+        </li>
+        <li class="@ValueIf(ViewBag.menu == "wat", "active")">
+          <a href="@ResolveUrl("wat/index.html")" title="Play Whack-A-Troll!">Play wat!</a>
+        </li>
+      </ul>
+      <!-- RHS menu -->
+      <!--
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://twitter.com/lukevenediger" title="lukevenediger"><i class="icon-twitter"></i></a></li>
+        <li><a href="http://www.linkedin.com/in/lukevenediger" title="Find me on LinkedIn"><i class="icon-linkedin"></i></a>
+        <li><a href="https://github.com/lukevenediger" title="github"><i class="icon-github"></i></a>
+      </ul>
+        -->
+    </div>
+  </div>
+</div>

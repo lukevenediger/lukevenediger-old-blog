@@ -1,0 +1,17 @@
+﻿@{
+  Layout = "~/_layout.cshtml";
+}
+
+<div class="container theme-showcase">
+  @foreach (var page in Model.Lists["blog"].TakeNewest())
+  {
+    <div class="row">
+      <div class="col-lg-8">
+        <a href="@ResolvePage(page)">@page.Title</a>
+        <p>Some interesting summary</p>
+      </div>
+    </div>
+  }
+</div>
+
+<hr />

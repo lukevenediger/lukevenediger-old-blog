@@ -133,34 +133,39 @@
     <Content Include="output\static\font\fontawesome-webfont.ttf" />
     <Content Include="output\static\font\fontawesome-webfont.woff" />
     <Content Include="output\static\font\FontAwesome.otf" />
-    <None Include="pages\graphite\carbon\index.md" />
-    <None Include="pages\graphite\system-administration.md" />
+    <Content Include="pages\blog\2014-Jan-03\5-things-Ive-learnt-being-a-developer-dad.md" />
     <Content Include="pages\blog\rss.xml" />
+    <Content Include="pages\blog\index.md" />
+    <Content Include="pages\blog\2013-Jul-01\some-kind-of-blog-post.md" />
+    <Content Include="pages\blog\2013-Sep-01\interesting-article.md" />
     <None Include="pages\CNAME" />
-    <None Include="pages\gists\index.md" />
-    <Content Include="pages\metrics\index.md" />
     <None Include="pages\no_template.md" />
+    <Content Include="pages\projects\index.md" />
     <Content Include="static\css\bootstrap-theme.min.css" />
+    <Content Include="pages\talks\index.md" />
     <None Include="static\css\game.less" />
     <Content Include="static\css\game.css" />
     <Content Include="static\css\game.min.css">
       <DependentUpon>game.less</DependentUpon>
     </Content>
+    <Content Include="static\css\site.css">
+      <DependentUpon>site.less</DependentUpon>
+    </Content>
+    <Content Include="static\css\site.min.css">
+      <DependentUpon>site.less</DependentUpon>
+    </Content>
     <Content Include="static\css\sticky-footer.css" />
     <Content Include="static\favicon.png" />
     <Content Include="static\font\fontawesome-webfont.svg" />
     <Content Include="static\images\404.jpg" />
+    <Content Include="static\images\business-application-metrics.jpg" />
     <Content Include="static\images\explosion.gif" />
     <Content Include="static\images\game-over.jpeg" />
     <Content Include="static\images\yaoming-lol.png" />
     <Content Include="static\images\yaoming.png" />
     <Content Include="static\scripts\fastclick.js" />
     <Content Include="static\scripts\jquery-2.0.3.min.js" />
-    <Content Include="pages\graphite\index.md" />
-    <Content Include="pages\graphite\whisper\tips-and-tricks.md" />
     <None Include="pages\index.md" />
-    <Content Include="pages\blog\2013-07-01.md" />
-    <Content Include="pages\blog\2013-07-05.md" />
     <Content Include="static\css\bootstrap.min.css" />
     <Content Include="static\css\font-awesome.min.css" />
     <Content Include="static\scripts\bootstrap.min.js" />
@@ -170,9 +175,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="templates\navbar.cshtml" />
-    <Content Include="pages\projects\statsd.net\index.md" />
-    <Content Include="pages\projects\statsd-csharp-client\index.md" />
-    <Content Include="pages\projects\champ\index.md" />
     <Content Include="static\font\fontawesome-webfont.eot" />
     <Content Include="static\font\fontawesome-webfont.ttf" />
     <Content Include="static\font\fontawesome-webfont.woff" />
@@ -182,6 +184,11 @@
     <Content Include="pages\wat\index.md">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="static\css\site.less" />
+    <Content Include="templates\blogsummary.cshtml" />
+    <Content Include="templates\home.cshtml" />
+    <Content Include="static\slides\business-application-metrics-luke-venediger.pdf" />
+    <Content Include="templates\talks.cshtml" />
     <None Include="templates\page.cshtml" />
     <Content Include="templates\footer.cshtml" />
     <None Include="templates\_layout.cshtml" />
