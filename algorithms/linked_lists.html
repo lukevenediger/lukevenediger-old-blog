@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="../static/favicon.png" />
     <link rel="icon" type="image/png" href="../static/favicon.png" />
 
-    <title>Talks | Luke Venediger</title>
+    <title>Linked Lists | Luke Venediger</title>
 
     <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../static/css/bootstrap-theme.min.css" rel="stylesheet" />
@@ -49,7 +49,7 @@
         <li>
           <a href="../projects/index.html">My Projects</a>
         </li>
-        <li class="active">
+        <li>
           <a href="../talks/index.html">Talks</a>
         </li>
         <li>
@@ -71,7 +71,7 @@
           <!-- title -->
   <div class="jumbotron detronalize">
     <div class="container">
-      <h3>Talks</h3>
+      <h3>Linked Lists</h3>
     </div>
   </div>
 
@@ -79,32 +79,113 @@
         <!-- Main Content -->
         
 
+<script src="code/common.js"></script>
+
 <div class="container theme-showcase">
-  <div class="row">
-    <div class="col-lg-12">
-      <p><!-- 
-  title = Talks
-  template = talks 
-  menu = talks
+    <div class="row">
+        <div class="col-lg-8">
+            <p><!--
+    Title=Linked Lists
+    template=algorithms
+    menu=projects
+    wikipedia=http://en.wikipedia.org/wiki/Linked_list
 -->
-<img src="../static/images/business-application-metrics.jpg" class="pull-right">
-Occasionally I give a talk on something interesting. I'll leave my slides here for your perusal.</p>
+Linked lists provide a way to store a long chain of data without having to pre-allocate
+how much space will be needed upfront. A linked list differs from an array in where and
+how the data is stored.</p>
 
-<h2>Business Application Metrics</h2>
+<h2>Playpen</h2>
 
-<p><em>31 October 2013</em>
-I was lucky to have presented a 15 minute lightning talk on metrics 
-at <a href="http://www.durbandigitalday.co.za">Durban Digital Day</a>.
-I took the audience through why metrics are so important
-and gave a quick overview of what's needed to collect
-and visualise metrics in your company.</p>
+<p>
+   <button id="create">Create Linked List</button>
+   <button id="createCyclic">Create Cyclic Linked List</button>
+   <button id="isCyclic">Is Cyclic?</button>
+   <button id="clear">Clear</button>
+</p>
 
-<p>Slides: <a href="../static/slides/business-application-metrics-luke-venediger.pdf">business-application-metrics-luke-venediger.pdf</a></p>
-
-    </div>
-  </div>
+<div id="output">
 </div>
 
+<h2>Properties of a Linked List</h2>
+
+<ul>
+<li>Each node contains the value you want to store and a pointer to the next node in the chain.</li>
+<li>The last node in a linked list doesn't point to anything (or we can say that it points to null).</li>
+<li>An acyclic linked list is one that has an end (i.e. a node with a 'next node' pointer of null).</li>
+<li>A cyclic linked list is one that doesn't have an end because all nodes have a link to another node.</li>
+</ul>
+
+<p>Advantages:</p>
+
+<ul>
+<li>No need to pre-allocate space when creating a list</li>
+</ul>
+
+<p>Disadvantages:</p>
+
+<ul>
+<li>Worst-case seek time is O(n) for n elements in the list</li>
+<li>Determining the length can also take O(n)</li>
+<li>Linked lists can become a loop.</li>
+</ul>
+
+<h2>Timings of Common Operations</h2>
+
+<ul>
+<li>Appending a node: O(n)</li>
+<li>Prepending a node: O(1)</li>
+<li>Inserting a node: O(n)</li>
+<li>Deleting a node: O(n)</li>
+</ul>
+
+<h2>Tweaks for Optimising Common Operations</h2>
+
+<p>Add a Length property to the node definition and increment the first node's Length counter
+after adding a new node. Finding the first node in a linked list takes O(1).</p>
+
+<h2>Learn More</h2>
+
+<p>Linked Lists Lecture 1:</p>
+
+<iframe width="640" height="390" src="//www.youtube.com/embed/htzJdKoEmO0" frameborder="0" allowfullscreen></iframe>
+
+<p>Linked Lists Lecture 2:</p>
+
+<iframe width="640" height="390" src="//www.youtube.com/embed/-c4I3gFYe3w" frameborder="0" allowfullscreen></iframe>
+
+<h3>Links</h3>
+
+<ul>
+<li><a href="http://www.programmerinterview.com/index.php/data-structures/how-to-find-if-a-linked-list-is-circular-or-has-a-cycle-or-it-ends/">How to find if a linked list is cyclic or acyclic</a></li>
+</ul>
+
+<script src="code/linked_lists.js"></script>
+
+        </div>
+        <div class="col-lg-4">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="http://en.wikipedia.org/wiki/Linked_list">Wikipedia: Linked Lists</a></li>
+            </ul>
+            <h2>More Learning</h2>
+            <h3>Videos</h3>
+            <ul>
+                <li><a href="http://www.youtube.com/watch?v=QMV45tHCYNI&list=PL4BBB74C7D2A1049C" title="39 CS lectures">Berkeley CS Lectures (39 videos)</a></li>
+            </ul>
+            <h3>Q n A</h3>
+            <ul>
+                <li><a href="http://stackoverflow.com/questions/tagged/data-structures?pageSize=15">#data-structures on stackoverflow.com</a></li>
+            </ul>
+            <h3>Best Of</h3>
+            <ul>
+                <li><a href="http://stackoverflow.com/questions/500607/what-are-the-lesser-known-but-useful-data-structures?rq=1">What are the lesser known but useful data structures?</a></li>
+            </ul>
+            <div class="alert alert-success">
+                <strong>Something wrong? </strong> Please let me know, all my contact details are on the <a href="../about.html">About Me page</a>.
+            </div>
+        </div>
+    </div>
+</div>
 <hr />
 
 

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Writings about software development, metrics, open source and computer science.">
+    <meta name="author" content="Luke Venediger">
+
+    <link rel="shortcut icon" type="image/png" href="../static/favicon.png" />
+    <link rel="icon" type="image/png" href="../static/favicon.png" />
+
+    <title>Hash Tables | Luke Venediger</title>
+
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../static/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../static/css/sticky-footer.css" rel="stylesheet" />
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../static/css/site.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../static/scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../static/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/scripts/underscore-min.js"></script>
+</head>
+<body>
+
+    <div id="wrap">
+        <!-- Nav Bar -->
+        <div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../index.html">Luke Venediger .me</a>
+    </div>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../index.html">Home</a>
+        </li>
+        <li>
+          <a href="../blog/index.html">Blog</a>
+        </li>
+        <li>
+          <a href="../about.html">About Me</a>
+        </li>
+        <li>
+          <a href="../projects/index.html">My Projects</a>
+        </li>
+        <li>
+          <a href="../talks/index.html">Talks</a>
+        </li>
+        <li>
+          <a href="../wat/index.html" title="Play Whack-A-Troll!">Play wat!</a>
+        </li>
+      </ul>
+      <!-- RHS menu -->
+      <!--
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://twitter.com/lukevenediger" title="lukevenediger"><i class="icon-twitter"></i></a></li>
+        <li><a href="http://www.linkedin.com/in/lukevenediger" title="Find me on LinkedIn"><i class="icon-linkedin"></i></a>
+        <li><a href="https://github.com/lukevenediger" title="github"><i class="icon-github"></i></a>
+      </ul>
+        -->
+    </div>
+  </div>
+</div>
+
+          <!-- title -->
+  <div class="jumbotron detronalize">
+    <div class="container">
+      <h3>Hash Tables</h3>
+    </div>
+  </div>
+
+
+        <!-- Main Content -->
+        
+
+<script src="code/common.js"></script>
+
+<div class="container theme-showcase">
+    <div class="row">
+        <div class="col-lg-8">
+            <p><!--
+    Title=Hash Tables
+    template=algorithms
+    menu=projects
+    wikipedia=http://en.wikipedia.org/wiki/Hash_table
+-->
+A hash table provides a way to store values hash a key without needing to know how many
+keys there are and without creating a huge memory footprint. The key is transformed in
+a compression function into a hash code with an acceptable probability of uniqueness and
+stored in a bucket.</p>
+
+<p>There is one bucket per compressed key. It's only necessary to create a new bucket if
+one doesn't exist already for a value about to be inserted. At insert time the <strong>original</strong>
+key and value are stored together in a linked list called the <strong>chain</strong>.</p>
+
+<h3>Playpen</h3>
+
+<p>
+  <input type="number" class="small-input" min="0" id="key" placeholder="Key" />
+  <input type="text" class="small-input" id="value" placeholder="Value" />
+  <button id="add">Add</button>
+  <button id="addRandom">Add Random</button>
+  <button id="restart">Restart</button>
+  &nbsp;
+  &nbsp;
+  <input type="number" class="small-input" min="0" id="fetchKey" placeholder="Key"/>
+  <button id="fetch">Fetch Value</button>
+  <span id="valueFound"></span>
+</p>
+
+<p>
+   window.exampleHash stats: Buckets = <span id="numBuckets">0</span>, Values = <span id="numValues">0</span>
+</p>
+
+<div id="output">
+</div>
+
+<h3>Properties of a Hash Table</h3>
+
+<p>A hash table is <em>usually</em> fast because the compression function maps a unique key to a
+unique hash code. However, it can happen that every key is compressed to the same hash code
+and stored in the same chain under the same bucket. When this happens the asymptotic seek
+time crashes to O(n) since it's actually traversing a linked list and comparing the
+input key with each link list node's original key.</p>
+
+<h3>Dealing With Duplicate Keys</h3>
+
+<p>... not duplicate <em>hash codes</em>! The implementation could choose to deal with duplicate keys
+for different values by:
+* Only allowing one value per unique key (not unique <em>hash code</em>)
+* Allowing multiple values per unique key
+The difference comes out in what happens when the user calls for the value. The first
+implementation guarantees that the value will always be the same, whereas the second
+will return a random value as if to say the values, while different, are actually one
+in the same because their keys are identical.</p>
+
+<h3>Asymptotic Performance</h3>
+
+<ul>
+<li>Insertion
+<ul>
+<li>Best Case: O(1)</li>
+<li>Worst Case: O(n)</li>
+</ul></li>
+<li>Deletion
+<ul>
+<li>Best Case: O(1)</li>
+<li>Worst Case: O(n)</li>
+</ul></li>
+<li>Seek
+<ul>
+<li>Best Case: O(1)</li>
+<li>Worst Case: O(n)</li>
+</ul></li>
+</ul>
+
+<h3>Learn More</h3>
+
+<p>Hash Tables Lecture</p>
+
+<iframe width="640" height="390" src="//www.youtube.com/embed/UPo-M8bzRrc" frameborder="0" allowfullscreen></iframe>
+
+<script src="code/hash_tables.js"></script>
+
+        </div>
+        <div class="col-lg-4">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="http://en.wikipedia.org/wiki/Hash_table">Wikipedia: Hash Tables</a></li>
+            </ul>
+            <h2>More Learning</h2>
+            <h3>Videos</h3>
+            <ul>
+                <li><a href="http://www.youtube.com/watch?v=QMV45tHCYNI&list=PL4BBB74C7D2A1049C" title="39 CS lectures">Berkeley CS Lectures (39 videos)</a></li>
+            </ul>
+            <h3>Q n A</h3>
+            <ul>
+                <li><a href="http://stackoverflow.com/questions/tagged/data-structures?pageSize=15">#data-structures on stackoverflow.com</a></li>
+            </ul>
+            <h3>Best Of</h3>
+            <ul>
+                <li><a href="http://stackoverflow.com/questions/500607/what-are-the-lesser-known-but-useful-data-structures?rq=1">What are the lesser known but useful data structures?</a></li>
+            </ul>
+            <div class="alert alert-success">
+                <strong>Something wrong? </strong> Please let me know, all my contact details are on the <a href="../about.html">About Me page</a>.
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+
+
+        <!-- end of wrap -->
+    </div>
+
+    <!-- Footer -->
+        <div id="footer">
+        <div class="container">
+            <p class="text-muted credit">
+                Copyright © 2013–2014 Luke Venediger.
+                &nbsp;
+                Built with <a href="https://github.com/lukevenediger/champ/">champ</a>, a simple static site generator for Windows. Built at 2014-01-18 11:02:29 PM
+            </p>
+        </div>
+    </div>
+
+    <script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-46850963-1', 'lukevenediger.me');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>
