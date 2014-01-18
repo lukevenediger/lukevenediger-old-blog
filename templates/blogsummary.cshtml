@@ -1,17 +1,17 @@
 ﻿@{
-  Layout = "~/_layout.cshtml";
+    Layout = "~/_layout.cshtml";
 }
 
 <div class="container theme-showcase">
-  @foreach (var page in Model.Lists["blog"].TakeNewest())
-  {
-    <div class="row">
-      <div class="col-lg-8">
-        <a href="@ResolvePage(page)">@page.Title</a>
-        <p>Some interesting summary</p>
-      </div>
-    </div>
-  }
+    @foreach (var page in Model.Lists["blog"].TakeNewest())
+    {
+        <div class="row">
+            <div class="col-lg-8">
+                <a href="@ResolvePage(page)">@page.Title</a>
+                <p>Since my son arrived I've never felt more productive. I share my top five insights with you.</p>
+            </div>
+        </div>
+    }
 </div>
 
 <hr />

@@ -1,32 +1,37 @@
 ﻿@{
-  Layout = "~/_layout.cshtml";
+    Layout = "~/_layout.cshtml";
 }
 
 <div class="container theme-showcase">
-  <div class="row">
-    <div class="col-lg-4">
-      <h2>Latest Posts</h2>
-      @foreach (var page in Model.Lists["blog"].TakeNewest(5))
-      {
-        <a href="@ResolvePage(page)">@page.Title</a>
-        <p>Some interesting summary</p>
-      }
-      <a href="@ResolveUrl("blog/index.html")">See All Posts</a>
+    <div class="row">
+        <div class="col-lg-4">
+
+            <h2>Latest Posts</h2>
+            @foreach (var page in Model.Lists["blog"].TakeNewest(5))
+            {
+                <a href="@ResolvePage(page)">@page.Title</a>
+                <p>Since my son arrived I've never felt more productive. I share my top five insights with you.</p>
+            }
+            <a href="@ResolveUrl("blog/index.html")">See All Posts</a>
+
+            <h2>Continuous Learning</h2>
+            <a href="algorithms/index.html">Algorithms and Data Structures</a>
+            <p>I'm learning about algorithms and data structures, so I decided to share what I've found. Includes code and interactive examples.</p>
+        </div>
+        <div class="col-lg-4">
+            <h2>My Top Projects</h2>
+            <a href="https://github.com/lukevenediger/statsd.net/">statsd.net</a>
+            <p>statsd.net is a metrics collection service that collects data, aggregates it and forwards the summarized information to a dashboard system.</p>
+            <a href="https://github.com/lukevenediger/dingu/">dingu IOC framework for JavaScript</a>
+            <p>An angularjs-style dependency injection framework for JavaScript, dingu makes it easy to define modules, singletons and constants that are assembled at runtime when needed.</p>
+            <a href="https://github.com/lukevenediger/statsd-csharp-client/">statsd client for .net</a>
+            <p>statsd-csharp-client is used in .net applications to send activity measurements to a stats collector like statsd.net.</p>
+            <a href="@ResolveUrl("projects/index.html")">See All Projects</a>
+        </div>
+        <div class="col-lg-4">
+            <h2><a href="https://twitter.com/lukevenediger">@@lukevenediger</a></h2>
+            <a class="twitter-timeline" href="https://twitter.com/lukevenediger" data-widget-id="419569153763053568">Tweets by @@lukevenediger</a>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+        </div>
     </div>
-    <div class="col-lg-4">
-      <h2>My Top Projects</h2>
-      <a href="https://github.com/lukevenediger/statsd.net/">statsd.net</a>
-      <p>statsd.net is a metrics collection service that collects data, aggregates it and forwards the summarized information to a dashboard system.</p>
-      <a href="https://github.com/lukevenediger/dingu/">dingu IOC framework for JavaScript</a>
-      <p>An angularjs-style dependency injection framework for JavaScript, dingu makes it easy to define modules, singletons and constants that are assembled at runtime when needed.</p>
-      <a href="https://github.com/lukevenediger/statsd-csharp-client/">statsd client for .net</a>
-      <p>statsd-csharp-client is used in .net applications to send activity measurements to a stats collector like statsd.net.</p>
-      <a href="@ResolveUrl("projects/index.html")">See All Projects</a>
-    </div>
-    <div class="col-lg-4">
-      <h2><a href="https://twitter.com/lukevenediger">@@lukevenediger</a></h2>
-      <a class="twitter-timeline" href="https://twitter.com/lukevenediger" data-widget-id="419569153763053568">Tweets by @@lukevenediger</a>
-      <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
-    </div>
-  </div>
 </div>

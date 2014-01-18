@@ -133,11 +133,15 @@
     <Content Include="output\static\font\fontawesome-webfont.ttf" />
     <Content Include="output\static\font\fontawesome-webfont.woff" />
     <Content Include="output\static\font\FontAwesome.otf" />
+    <Content Include="pages\algorithms\code\common.js" />
+    <Content Include="pages\algorithms\code\hash_tables.js" />
+    <Content Include="pages\algorithms\code\linked_lists.js" />
     <Content Include="pages\blog\2014-Jan-03\5-things-Ive-learnt-being-a-developer-dad.md" />
     <Content Include="pages\blog\rss.xml" />
     <Content Include="pages\blog\index.md" />
-    <Content Include="pages\blog\2013-Jul-01\some-kind-of-blog-post.md" />
-    <Content Include="pages\blog\2013-Sep-01\interesting-article.md" />
+    <Content Include="pages\algorithms\index.md" />
+    <Content Include="pages\algorithms\linked_lists.md" />
+    <Content Include="pages\algorithms\hash_tables.md" />
     <None Include="pages\CNAME" />
     <None Include="pages\no_template.md" />
     <Content Include="pages\projects\index.md" />
@@ -170,6 +174,8 @@
     <Content Include="static\css\font-awesome.min.css" />
     <Content Include="static\scripts\bootstrap.min.js" />
     <Content Include="static\scripts\statsd.js" />
+    <Content Include="static\scripts\underscore-min.js" />
+    <Content Include="static\scripts\underscore.js" />
     <Content Include="static\scripts\whackatroll.js" />
     <Content Include="templates\post.cshtml" />
   </ItemGroup>
@@ -189,8 +195,10 @@
     <Content Include="templates\home.cshtml" />
     <Content Include="static\slides\business-application-metrics-luke-venediger.pdf" />
     <Content Include="templates\talks.cshtml" />
+    <Content Include="templates\algorithms.cshtml" />
     <None Include="templates\page.cshtml" />
     <Content Include="templates\footer.cshtml" />
+    <Content Include="templates\tracking.cshtml" />
     <None Include="templates\_layout.cshtml" />
   </ItemGroup>
   <ItemGroup>

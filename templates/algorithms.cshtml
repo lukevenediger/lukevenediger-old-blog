@@ -1,0 +1,36 @@
+@{
+    Layout = "~/_layout.cshtml";
+}
+
+<script src="code/common.js"></script>
+
+<div class="container theme-showcase">
+    <div class="row">
+        <div class="col-lg-8">
+            @Model.Content
+        </div>
+        <div class="col-lg-4">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="@ViewBag.wikipedia">Wikipedia: @ViewBag.Title</a></li>
+            </ul>
+            <h2>More Learning</h2>
+            <h3>Videos</h3>
+            <ul>
+                <li><a href="http://www.youtube.com/watch?v=QMV45tHCYNI&list=PL4BBB74C7D2A1049C" title="39 CS lectures">Berkeley CS Lectures (39 videos)</a></li>
+            </ul>
+            <h3>Q n A</h3>
+            <ul>
+                <li><a href="http://stackoverflow.com/questions/tagged/data-structures?pageSize=15">#data-structures on stackoverflow.com</a></li>
+            </ul>
+            <h3>Best Of</h3>
+            <ul>
+                <li><a href="http://stackoverflow.com/questions/500607/what-are-the-lesser-known-but-useful-data-structures?rq=1">What are the lesser known but useful data structures?</a></li>
+            </ul>
+            <div class="alert alert-success">
+                <strong>Something wrong? </strong> Please let me know, all my contact details are on the <a href="../about.html">About Me page</a>.
+            </div>
+        </div>
+    </div>
+</div>
+<hr />

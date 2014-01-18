@@ -5,3 +5,6 @@
 div.detronalize div.container {
   padding-left: 0px;
 }
+input.small-input {
+  width: 55px;
+}
