@@ -27,6 +27,9 @@ content really simple. It has the following features:
 * Mirrors the folder structure used in the content pages for the site structure
 * Supports the use of a static folder
 
+## [champ bootstrap](https://github.com/lukevenediger/champ-bootstrap/)
+A sample site to help champ users get started with a static site.
+
 ## [statsdcmd](https://github.com/lukevenediger/statsdcmd/)
 A lightweight command line client for statsd.net and statsd. Useful for, say, logging stats on batch jobs,
 integrating with scripted workflows like source code builds and integrating with Powershell. Works with .Net 4.5

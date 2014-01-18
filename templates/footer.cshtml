@@ -1,11 +1,13 @@
 ﻿@using System;
-@if(ValueOrDefault(ViewBag.showFooter, "true") == "true")
+@if (ValueOrDefault(ViewBag.showFooter, "true") == "true")
 {
-  <div id="footer">
-    <div class="container">
-      <p class="text-muted credit">
-        Built with <a href="https://github.com/lukevenediger/champ/">champ</a>, a simple static site generator for Windows. Built at @DateTime.Now.ToString()
-      </p>
+    <div id="footer">
+        <div class="container">
+            <p class="text-muted credit">
+                Copyright © 2013–2014 Luke Venediger.
+                &nbsp;
+                Built with <a href="https://github.com/lukevenediger/champ/">champ</a>, a simple static site generator for Windows. Built at @DateTime.Now.ToString()
+            </p>
+        </div>
     </div>
-  </div>
 }
