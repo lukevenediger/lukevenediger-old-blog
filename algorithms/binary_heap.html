@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="../static/favicon.png" />
     <link rel="icon" type="image/png" href="../static/favicon.png" />
 
-    <title>Linked Lists | Luke Venediger</title>
+    <title>Binary Heap | Luke Venediger</title>
 
     <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../static/css/bootstrap-theme.min.css" rel="stylesheet" />
@@ -71,7 +71,7 @@
           <!-- title -->
     <div class="jumbotron detronalize">
         <div class="container">
-            <h3>Linked Lists</h3>
+            <h3>Binary Heap</h3>
         </div>
     </div>
 
@@ -85,103 +85,57 @@
     <div class="row">
         <div class="col-lg-8">
             <p><!--
-    Title=Linked Lists
-    template=algorithms
-    menu=projects
-    wikipedia=http://en.wikipedia.org/wiki/Linked_list</p>
+    title=Binary Heap
+    template=Algorithms
+    wikipedia=http://en.wikipedia.org/wiki/Binary_heap
+    menu=projects</p>
 
-<pre><code>readTime=O(n) / O(n)
-insertTime=O(1) / O(1)
-deleteTime=O(1) / O(1)
+<pre><code>readTime=-
+insertTime=O(1) / O(log n)
+deleteTime=O(log n) / O(log n)
 </code></pre>
 
 <p>-->
-Linked lists provide a way to store a long chain of data without having to pre-allocate
-how much space will be needed upfront. A linked list differs from an array in where and
-how the data is stored.</p>
-
-<h2>Playpen</h2>
-
-<p>
-   <button id="create">Create Linked List</button>
-   <button id="createCyclic">Create Cyclic Linked List</button>
-   <button id="isCyclic">Is Cyclic?</button>
-   <button id="clear">Clear</button>
-</p>
-
-<div id="output">
-</div>
-
-<h2>Properties of a Linked List</h2>
+A binary heap is binary tree that has the following properties:</p>
 
 <ul>
-<li>Each node contains the value you want to store and a pointer to the next node in the chain.</li>
-<li>The last node in a linked list doesn't point to anything (or we can say that it points to null).</li>
-<li>An acyclic linked list is one that has an end (i.e. a node with a 'next node' pointer of null).</li>
-<li>A cyclic linked list is one that doesn't have an end because all nodes have a link to another node.</li>
+<li>Each node has at most two children</li>
+<li>The value of a node's child is always less than that of the node itself</li>
 </ul>
 
-<p>Advantages:</p>
+<p>Interestingly, and unlike a <a href="binary_search_tree.html">binary search tree</a>, there is no requirement
+that the left child be less than the right child of a node.</p>
+
+<h3>Regular Structure</h3>
+
+<p>A heap is usually represented using an array, because there is a predictable (formal) way of going
+from a node to its left and right child. This makes it less memory intensive because there's no
+need to store pointers to child nodes.</p>
+
+<h3>Finding Nodes</h3>
+
+<p>For any node at position <em>i</em>, where i is a zero-based index into an array of length <em>n</em></p>
 
 <ul>
-<li>No need to pre-allocate space when creating a list</li>
+<li>The left node will be at <em>2n + 1</em></li>
+<li>the right node will be at <em>2n + 2</em></li>
 </ul>
-
-<p>Disadvantages:</p>
-
-<ul>
-<li>Worst-case seek time is O(n) for n elements in the list</li>
-<li>Determining the length can also take O(n)</li>
-<li>Linked lists can become a loop.</li>
-</ul>
-
-<h2>Timings of Common Operations</h2>
-
-<ul>
-<li>Appending a node: O(n)</li>
-<li>Prepending a node: O(1)</li>
-<li>Inserting a node: O(n)</li>
-<li>Deleting a node: O(n)</li>
-</ul>
-
-<h2>Tweaks for Optimising Common Operations</h2>
-
-<p>Add a Length property to the node definition and increment the first node's Length counter
-after adding a new node. Finding the first node in a linked list takes O(1).</p>
-
-<h2>Learn More</h2>
-
-<p>Linked Lists Lecture 1:</p>
-
-<iframe width="640" height="390" src="//www.youtube.com/embed/htzJdKoEmO0" frameborder="0" allowfullscreen></iframe>
-
-<p>Linked Lists Lecture 2:</p>
-
-<iframe width="640" height="390" src="//www.youtube.com/embed/-c4I3gFYe3w" frameborder="0" allowfullscreen></iframe>
-
-<h3>Links</h3>
-
-<ul>
-<li><a href="http://www.programmerinterview.com/index.php/data-structures/how-to-find-if-a-linked-list-is-circular-or-has-a-cycle-or-it-ends/">How to find if a linked list is cyclic or acyclic</a></li>
-</ul>
-
-<script src="code/linked_lists.js"></script>
 
         </div>
         <div class="col-lg-4">
             <div class="alert alert-info">
-                <h3>Linked Lists</h3>
+                <h3>Binary Heap</h3>
                 <div >
                     <strong>Performance</strong>
                     <ul>
-                        <li>Read: <strong>O(n) / O(n)</strong></li>
-                        <li>Insert: <strong>O(1) / O(1)</strong></li>
-                        <li>Delete: <strong>O(1) / O(1)</strong></li>
+                        <li>Read: <strong>-</strong></li>
+                        <li>Insert: <strong>O(1) / O(log n)</strong></li>
+                        <li>Delete: <strong>O(log n) / O(log n)</strong></li>
                     </ul>
                 </div>
                 <strong>Quick Links</strong>
                 <ul>
-                    <li><a href="http://en.wikipedia.org/wiki/Linked_list">Wikipedia: Linked Lists</a></li>
+                    <li><a href="http://en.wikipedia.org/wiki/Binary_heap">Wikipedia: Binary Heap</a></li>
                 </ul>
             </div>
             <div class="alert alert-success">

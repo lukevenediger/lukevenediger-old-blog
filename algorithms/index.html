@@ -69,16 +69,16 @@
 </div>
 
           <!-- title -->
-  <div class="jumbotron detronalize">
-    <div class="container">
-      <h3>Fun with Algorithms and Data Structures</h3>
+    <div class="jumbotron detronalize">
+        <div class="container">
+            <h3>Fun with Algorithms and Data Structures</h3>
+        </div>
     </div>
-  </div>
 
 
         <!-- Main Content -->
         
-
+<script src="../../static/scripts/raphael.min.js"></script>
 <script src="code/common.js"></script>
 
 <div class="container theme-showcase">
@@ -88,6 +88,7 @@
     title=Fun with Algorithms and Data Structures
     menu=projects 
     template=algorithms
+    hidePerformance=true
 -->
 I'd like to learn more about algorithms and data structures, so I've implemented some of them here
 in my CS playground.</p>
@@ -96,29 +97,49 @@ in my CS playground.</p>
 
 <ul>
 <li><a href="linked_lists.html">Linked Lists</a></li>
+<li><a href="skip_list.html">Skip Lists</a></li>
 <li><a href="hash_tables.html">Hash Tables</a></li>
+<li><a href="trees.html">Trees</a>
+<ul>
+<li><a href="binary_search_tree.html">Binary Search Tree</a></li>
+</ul></li>
+<li><a href="binary_heap.html">Binary Heap</a></li>
 </ul>
 
         </div>
         <div class="col-lg-4">
-            <h2>Quick Links</h2>
-            <ul>
-                <li><a>Wikipedia: Fun with Algorithms and Data Structures</a></li>
-            </ul>
-            <h2>More Learning</h2>
-            <h3>Videos</h3>
-            <ul>
-                <li><a href="http://www.youtube.com/watch?v=QMV45tHCYNI&list=PL4BBB74C7D2A1049C" title="39 CS lectures">Berkeley CS Lectures (39 videos)</a></li>
-            </ul>
-            <h3>Q n A</h3>
-            <ul>
-                <li><a href="http://stackoverflow.com/questions/tagged/data-structures?pageSize=15">#data-structures on stackoverflow.com</a></li>
-            </ul>
-            <h3>Best Of</h3>
-            <ul>
-                <li><a href="http://stackoverflow.com/questions/500607/what-are-the-lesser-known-but-useful-data-structures?rq=1">What are the lesser known but useful data structures?</a></li>
-            </ul>
+            <div class="alert alert-info">
+                <h3>Fun with Algorithms and Data Structures</h3>
+                <div style='display: none;'>
+                    <strong>Performance</strong>
+                    <ul>
+                        <li>Read: <strong></strong></li>
+                        <li>Insert: <strong></strong></li>
+                        <li>Delete: <strong></strong></li>
+                    </ul>
+                </div>
+                <strong>Quick Links</strong>
+                <ul>
+                    <li><a>Wikipedia: Fun with Algorithms and Data Structures</a></li>
+                </ul>
+            </div>
             <div class="alert alert-success">
+                <h3>More Learning</h3>
+                <strong>More Learning</strong>
+                <ul>
+                    <li><a href="http://www.youtube.com/watch?v=QMV45tHCYNI&list=PL4BBB74C7D2A1049C" title="39 CS lectures">Berkeley CS Lectures (39 videos)</a></li>
+                </ul>
+                <strong>Discussions</strong>
+                <ul>
+                    <li><a href="http://stackoverflow.com/questions/tagged/data-structures?pageSize=15">#data-structures on stackoverflow.com</a></li>
+                </ul>
+                <strong>Editor's Picks</strong>
+                <ul>
+                    <li><a href="http://stackoverflow.com/questions/500607/what-are-the-lesser-known-but-useful-data-structures?rq=1">What are the lesser known but useful data structures?</a></li>
+                    <li><a href="http://bigocheatsheet.com/">Big-O Cheat Sheet</a></li>
+                </ul>
+            </div>
+            <div class="alert alert-warning">
                 <strong>Something wrong? </strong> Please let me know, all my contact details are on the <a href="../about.html">About Me page</a>.
             </div>
         </div>
@@ -136,7 +157,7 @@ in my CS playground.</p>
             <p class="text-muted credit">
                 Copyright © 2013–2014 Luke Venediger.
                 &nbsp;
-                Built with <a href="https://github.com/lukevenediger/champ/">champ</a>, a simple static site generator for Windows. Built at 2014-01-18 11:02:29 PM
+                Built with <a href="https://github.com/lukevenediger/champ/">champ</a>, a simple static site generator for Windows. Built at 2014-01-26 12:44:00 AM
             </p>
         </div>
     </div>

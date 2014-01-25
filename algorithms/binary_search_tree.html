@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="../static/favicon.png" />
     <link rel="icon" type="image/png" href="../static/favicon.png" />
 
-    <title>Linked Lists | Luke Venediger</title>
+    <title>Binary Search Tree | Luke Venediger</title>
 
     <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../static/css/bootstrap-theme.min.css" rel="stylesheet" />
@@ -71,7 +71,7 @@
           <!-- title -->
     <div class="jumbotron detronalize">
         <div class="container">
-            <h3>Linked Lists</h3>
+            <h3>Binary Search Tree</h3>
         </div>
     </div>
 
@@ -85,103 +85,47 @@
     <div class="row">
         <div class="col-lg-8">
             <p><!--
-    Title=Linked Lists
+    title=Binary Search Tree
     template=algorithms
-    menu=projects
-    wikipedia=http://en.wikipedia.org/wiki/Linked_list</p>
+    menu=project
+    wikipedia=http://en.wikipedia.org/wiki/Binary<em>search</em>tree</p>
 
-<pre><code>readTime=O(n) / O(n)
-insertTime=O(1) / O(1)
-deleteTime=O(1) / O(1)
+<pre><code>readTime=O(log n) / O(n)
+insertTime=O(log n) / O(n)
+deleteTime=O(log n) / O(n)
 </code></pre>
 
 <p>-->
-Linked lists provide a way to store a long chain of data without having to pre-allocate
-how much space will be needed upfront. A linked list differs from an array in where and
-how the data is stored.</p>
-
-<h2>Playpen</h2>
-
-<p>
-   <button id="create">Create Linked List</button>
-   <button id="createCyclic">Create Cyclic Linked List</button>
-   <button id="isCyclic">Is Cyclic?</button>
-   <button id="clear">Clear</button>
-</p>
-
-<div id="output">
-</div>
-
-<h2>Properties of a Linked List</h2>
+A Binary Search Tree is a tree where:</p>
 
 <ul>
-<li>Each node contains the value you want to store and a pointer to the next node in the chain.</li>
-<li>The last node in a linked list doesn't point to anything (or we can say that it points to null).</li>
-<li>An acyclic linked list is one that has an end (i.e. a node with a 'next node' pointer of null).</li>
-<li>A cyclic linked list is one that doesn't have an end because all nodes have a link to another node.</li>
+<li>Every node can have at most two children</li>
+<li>A node's left child has a lesser value</li>
+<li>A node's right child has a greater value</li>
+<li>Every subtree is also a Binary Search Tree</li>
 </ul>
 
-<p>Advantages:</p>
+<h3>Balanced Binary Tree</h3>
 
-<ul>
-<li>No need to pre-allocate space when creating a list</li>
-</ul>
-
-<p>Disadvantages:</p>
-
-<ul>
-<li>Worst-case seek time is O(n) for n elements in the list</li>
-<li>Determining the length can also take O(n)</li>
-<li>Linked lists can become a loop.</li>
-</ul>
-
-<h2>Timings of Common Operations</h2>
-
-<ul>
-<li>Appending a node: O(n)</li>
-<li>Prepending a node: O(1)</li>
-<li>Inserting a node: O(n)</li>
-<li>Deleting a node: O(n)</li>
-</ul>
-
-<h2>Tweaks for Optimising Common Operations</h2>
-
-<p>Add a Length property to the node definition and increment the first node's Length counter
-after adding a new node. Finding the first node in a linked list takes O(1).</p>
-
-<h2>Learn More</h2>
-
-<p>Linked Lists Lecture 1:</p>
-
-<iframe width="640" height="390" src="//www.youtube.com/embed/htzJdKoEmO0" frameborder="0" allowfullscreen></iframe>
-
-<p>Linked Lists Lecture 2:</p>
-
-<iframe width="640" height="390" src="//www.youtube.com/embed/-c4I3gFYe3w" frameborder="0" allowfullscreen></iframe>
-
-<h3>Links</h3>
-
-<ul>
-<li><a href="http://www.programmerinterview.com/index.php/data-structures/how-to-find-if-a-linked-list-is-circular-or-has-a-cycle-or-it-ends/">How to find if a linked list is cyclic or acyclic</a></li>
-</ul>
-
-<script src="code/linked_lists.js"></script>
+<p>A balanced binary tree has the same number of child nodes on both sides. A balanced tree ensures that the
+worst-case search time for a value is O(log n). A tree that isn't balanced at all behaves like a linked list
+with a worst-case search time of O(n).</p>
 
         </div>
         <div class="col-lg-4">
             <div class="alert alert-info">
-                <h3>Linked Lists</h3>
+                <h3>Binary Search Tree</h3>
                 <div >
                     <strong>Performance</strong>
                     <ul>
-                        <li>Read: <strong>O(n) / O(n)</strong></li>
-                        <li>Insert: <strong>O(1) / O(1)</strong></li>
-                        <li>Delete: <strong>O(1) / O(1)</strong></li>
+                        <li>Read: <strong>O(log n) / O(n)</strong></li>
+                        <li>Insert: <strong>O(log n) / O(n)</strong></li>
+                        <li>Delete: <strong>O(log n) / O(n)</strong></li>
                     </ul>
                 </div>
                 <strong>Quick Links</strong>
                 <ul>
-                    <li><a href="http://en.wikipedia.org/wiki/Linked_list">Wikipedia: Linked Lists</a></li>
+                    <li><a href="http://en.wikipedia.org/wiki/Binary_search_tree">Wikipedia: Binary Search Tree</a></li>
                 </ul>
             </div>
             <div class="alert alert-success">

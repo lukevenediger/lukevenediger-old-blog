@@ -69,16 +69,16 @@
 </div>
 
           <!-- title -->
-  <div class="jumbotron detronalize">
-    <div class="container">
-      <h3>Hash Tables</h3>
+    <div class="jumbotron detronalize">
+        <div class="container">
+            <h3>Hash Tables</h3>
+        </div>
     </div>
-  </div>
 
 
         <!-- Main Content -->
         
-
+<script src="../../static/scripts/raphael.min.js"></script>
 <script src="code/common.js"></script>
 
 <div class="container theme-showcase">
@@ -88,8 +88,14 @@
     Title=Hash Tables
     template=algorithms
     menu=projects
-    wikipedia=http://en.wikipedia.org/wiki/Hash_table
--->
+    wikipedia=http://en.wikipedia.org/wiki/Hash_table</p>
+
+<pre><code>readTime=O(1) / O(n)
+insertTime=O(1) / O(n)
+deleteTime=O(1) / O(n)
+</code></pre>
+
+<p>-->
 A hash table provides a way to store values hash a key without needing to know how many
 keys there are and without creating a huge memory footprint. The key is transformed in
 a compression function into a hash code with an acceptable probability of uniqueness and
@@ -170,24 +176,38 @@ in the same because their keys are identical.</p>
 
         </div>
         <div class="col-lg-4">
-            <h2>Quick Links</h2>
-            <ul>
-                <li><a href="http://en.wikipedia.org/wiki/Hash_table">Wikipedia: Hash Tables</a></li>
-            </ul>
-            <h2>More Learning</h2>
-            <h3>Videos</h3>
-            <ul>
-                <li><a href="http://www.youtube.com/watch?v=QMV45tHCYNI&list=PL4BBB74C7D2A1049C" title="39 CS lectures">Berkeley CS Lectures (39 videos)</a></li>
-            </ul>
-            <h3>Q n A</h3>
-            <ul>
-                <li><a href="http://stackoverflow.com/questions/tagged/data-structures?pageSize=15">#data-structures on stackoverflow.com</a></li>
-            </ul>
-            <h3>Best Of</h3>
-            <ul>
-                <li><a href="http://stackoverflow.com/questions/500607/what-are-the-lesser-known-but-useful-data-structures?rq=1">What are the lesser known but useful data structures?</a></li>
-            </ul>
+            <div class="alert alert-info">
+                <h3>Hash Tables</h3>
+                <div >
+                    <strong>Performance</strong>
+                    <ul>
+                        <li>Read: <strong>O(1) / O(n)</strong></li>
+                        <li>Insert: <strong>O(1) / O(n)</strong></li>
+                        <li>Delete: <strong>O(1) / O(n)</strong></li>
+                    </ul>
+                </div>
+                <strong>Quick Links</strong>
+                <ul>
+                    <li><a href="http://en.wikipedia.org/wiki/Hash_table">Wikipedia: Hash Tables</a></li>
+                </ul>
+            </div>
             <div class="alert alert-success">
+                <h3>More Learning</h3>
+                <strong>More Learning</strong>
+                <ul>
+                    <li><a href="http://www.youtube.com/watch?v=QMV45tHCYNI&list=PL4BBB74C7D2A1049C" title="39 CS lectures">Berkeley CS Lectures (39 videos)</a></li>
+                </ul>
+                <strong>Discussions</strong>
+                <ul>
+                    <li><a href="http://stackoverflow.com/questions/tagged/data-structures?pageSize=15">#data-structures on stackoverflow.com</a></li>
+                </ul>
+                <strong>Editor's Picks</strong>
+                <ul>
+                    <li><a href="http://stackoverflow.com/questions/500607/what-are-the-lesser-known-but-useful-data-structures?rq=1">What are the lesser known but useful data structures?</a></li>
+                    <li><a href="http://bigocheatsheet.com/">Big-O Cheat Sheet</a></li>
+                </ul>
+            </div>
+            <div class="alert alert-warning">
                 <strong>Something wrong? </strong> Please let me know, all my contact details are on the <a href="../about.html">About Me page</a>.
             </div>
         </div>
@@ -205,7 +225,7 @@ in the same because their keys are identical.</p>
             <p class="text-muted credit">
                 Copyright © 2013–2014 Luke Venediger.
                 &nbsp;
-                Built with <a href="https://github.com/lukevenediger/champ/">champ</a>, a simple static site generator for Windows. Built at 2014-01-18 11:02:29 PM
+                Built with <a href="https://github.com/lukevenediger/champ/">champ</a>, a simple static site generator for Windows. Built at 2014-01-26 12:44:00 AM
             </p>
         </div>
     </div>
