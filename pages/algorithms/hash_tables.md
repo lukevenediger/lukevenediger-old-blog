@@ -3,6 +3,10 @@
     template=algorithms
     menu=projects
     wikipedia=http://en.wikipedia.org/wiki/Hash_table
+
+    readTime=O(1) / O(n)
+    insertTime=O(1) / O(n)
+    deleteTime=O(1) / O(n)
 -->
 A hash table provides a way to store values hash a key without needing to know how many
 keys there are and without creating a huge memory footprint. The key is transformed in

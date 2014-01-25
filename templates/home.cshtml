@@ -10,7 +10,7 @@
             @foreach (var page in Model.Lists["blog"].TakeNewest(5))
             {
                 <a href="@ResolvePage(page)">@page.Title</a>
-                <p>Since my son arrived I've never felt more productive. I share my top five insights with you.</p>
+                <p>@page.Summary</p>
             }
             <a href="@ResolveUrl("blog/index.html")">See All Posts</a>
 

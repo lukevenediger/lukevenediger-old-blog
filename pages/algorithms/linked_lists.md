@@ -3,6 +3,10 @@
     template=algorithms
     menu=projects
     wikipedia=http://en.wikipedia.org/wiki/Linked_list
+
+    readTime=O(n) / O(n)
+    insertTime=O(1) / O(1)
+    deleteTime=O(1) / O(1)
 -->
 Linked lists provide a way to store a long chain of data without having to pre-allocate
 how much space will be needed upfront. A linked list differs from an array in where and

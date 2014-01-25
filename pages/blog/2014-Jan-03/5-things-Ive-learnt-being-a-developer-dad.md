@@ -4,6 +4,7 @@ Template = post
 Menu = blog
 Date = folder
 list = blog
+Summary = Since my son arrived I've never felt more productive. I share my top five insights with you.
 --> 
 
 Looking back on my life before my son arrived made me realise how much

@@ -1,13 +1,13 @@
 ﻿@if (ValueOrDefault(ViewBag.showJumbotron, "true") == "true")
 {
   <!-- title -->
-  <div class="jumbotron detronalize">
-    <div class="container">
-      <h3>@Model.Page.Title</h3>
-      @if (!String.IsNullOrEmpty(ViewBag.subtext))
-      {
-        <p>@ViewBag.subtext</p>
-      }
+    <div class="jumbotron detronalize">
+        <div class="container">
+            <h3>@Model.Page.Title</h3>
+            @if (!String.IsNullOrEmpty(ViewBag.subtext))
+            {
+                <p>@ViewBag.subtext</p>
+            }
+        </div>
     </div>
-  </div>
 }

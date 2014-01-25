@@ -136,17 +136,29 @@
     <Content Include="pages\algorithms\code\common.js" />
     <Content Include="pages\algorithms\code\hash_tables.js" />
     <Content Include="pages\algorithms\code\linked_lists.js" />
+    <None Include="pages\algorithms\binary_heap.md" />
     <Content Include="pages\blog\2014-Jan-03\5-things-Ive-learnt-being-a-developer-dad.md" />
     <Content Include="pages\blog\rss.xml" />
     <Content Include="pages\blog\index.md" />
     <Content Include="pages\algorithms\index.md" />
     <Content Include="pages\algorithms\linked_lists.md" />
     <Content Include="pages\algorithms\hash_tables.md" />
+    <Content Include="pages\algorithms\trees.md" />
+    <Content Include="pages\algorithms\binary_search_tree.md" />
+    <Content Include="pages\algorithms\skip_list.md" />
+    <Content Include="pages\blog\2014-Jan-26\grampa-I-wish-you-could-meet-my-son.md" />
     <None Include="pages\CNAME" />
     <None Include="pages\no_template.md" />
     <Content Include="pages\projects\index.md" />
+    <Content Include="static\css\algorithms.css">
+      <DependentUpon>algorithms.less</DependentUpon>
+    </Content>
+    <Content Include="static\css\algorithms.min.css">
+      <DependentUpon>algorithms.less</DependentUpon>
+    </Content>
     <Content Include="static\css\bootstrap-theme.min.css" />
     <Content Include="pages\talks\index.md" />
+    <Content Include="static\css\algorithms.less" />
     <None Include="static\css\game.less" />
     <Content Include="static\css\game.css" />
     <Content Include="static\css\game.min.css">
@@ -173,6 +185,10 @@
     <Content Include="static\css\bootstrap.min.css" />
     <Content Include="static\css\font-awesome.min.css" />
     <Content Include="static\scripts\bootstrap.min.js" />
+    <Content Include="static\scripts\raphael.js" />
+    <Content Include="static\scripts\raphael.min.js">
+      <DependentUpon>raphael.js</DependentUpon>
+    </Content>
     <Content Include="static\scripts\statsd.js" />
     <Content Include="static\scripts\underscore-min.js" />
     <Content Include="static\scripts\underscore.js" />
@@ -196,6 +212,9 @@
     <Content Include="static\slides\business-application-metrics-luke-venediger.pdf" />
     <Content Include="templates\talks.cshtml" />
     <Content Include="templates\algorithms.cshtml" />
+    <Content Include="static\scripts\raphael.min.js.map">
+      <DependentUpon>raphael.js</DependentUpon>
+    </Content>
     <None Include="templates\page.cshtml" />
     <Content Include="templates\footer.cshtml" />
     <Content Include="templates\tracking.cshtml" />
