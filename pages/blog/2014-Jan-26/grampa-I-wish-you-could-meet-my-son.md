@@ -9,7 +9,7 @@ Summary = A tribute to my late Grandfather, Harry Roberts
 
 One of my proudest moments was watching my them 88-year old Grandad
 walking my wife down the isle at our wedding. My wife's father had
-passed away man years back, and my Grandad steppes in to do the honors.
+passed away many years back, and my Grandad steppes in to do the honors.
 I pondered how this quiet, strong man has been a role model for me throughout
 my childhood. It was a gift for me to have him play such a prominent role
 on the most important day of my life.
